@@ -20,7 +20,7 @@ public protocol CarouselCardModel: ObservableObject {
     func willSetActiveCard(newValue: Int)
 }
 
-public class CarouselCardModelImpl: CarouselCardModel {
+open class CarouselCardModelImpl: CarouselCardModel {
 
     var itemsCount: Int
 
