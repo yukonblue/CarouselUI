@@ -22,7 +22,7 @@ public protocol CarouselCardModel: ObservableObject {
 
 open class CarouselCardModelImpl: CarouselCardModel {
 
-    var itemsCount: Int
+    public var itemsCount: Int
 
     @Published public var activeCard: Int = 0 {
         willSet(newValue) {
@@ -44,7 +44,7 @@ open class CarouselCardModelImpl: CarouselCardModel {
         self.activeCard = max(self.activeCard - 1, 0)
     }
 
-    public func willSetActiveCard(newValue: Int) {
+    open func willSetActiveCard(newValue: Int) {
         // Do nothing
     }
 }
